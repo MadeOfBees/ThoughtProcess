@@ -62,7 +62,18 @@ async function addAFriend (req,res){
     }
 }
 
+async function deleteAFriend (req,res){
+    try {
+        const user = {_id:req.params.userId}
+        const target =  {$pull:{friends:req.params.friendId}};
+        await User.findOneAndUpdate(user,target);
+        res.json("Deleted friend")
+    } catch (error) {
+        
+    }
+}
 
 
 
-module.exports = {getAll, addAUser, getByID, updateUser, deleteUser, addAFriend}
+
+module.exports = {getAll, addAUser, getByID, updateUser, deleteUser, addAFriend, deleteAFriend}
