@@ -1,4 +1,4 @@
-const Thought = require (`../models/index.js`);
+const {Thought} = require (`../models/index.js`);
 
 async function getAll(req,res) {
     try {
