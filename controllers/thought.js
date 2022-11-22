@@ -9,4 +9,35 @@ async function getAll(req,res) {
     }
 }
 
-module.exports = {getAll}
+async function getByID(req,res) {
+    try {
+        const search = req.params.id
+        var thought = await Thought.findById(search);
+        res.json(thought);
+    } catch (error) {
+        res.json(error);
+    }
+}
+
+async function updateThought (req,res){
+    try {
+        const search = {_id:req.params.id}
+        const updateThought = await Thought.findOneAndUpdate(search,req.body);
+        res.json(updateThought);
+    } catch (error) {
+        console.log(error)
+        res.json(error);
+    }
+}
+
+async function deleteThought(req,res) {
+    try {
+        const search = {_id:req.params.id}
+        await Thought.deleteOne(search);
+        res.json("Brain:bleached");
+    } catch (error) {
+        res.json(error);
+    }
+}
+
+module.exports = {getAll,getByID,updateThought,deleteThought}
