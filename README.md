@@ -5,8 +5,8 @@
  A simple social media backend with support for comments and reactions 
 
 ## Installation/Instructions: 
- I don't recomend ever using this but if you wanted to for some reason you'd download the repo, run NPM i, npm start then 
- Use insomnia to add some users, then you can make posts as said users, and then react to those. 
+ I don't recomend ever using this but if you wanted to for some reason you'd download the repo, run NPM i, npm start then:
+ Once the server is up use insomnia to add users, then you can make posts as said users, and then finally react to those posts. There's also support for updating and deleting users, posts and reactions. 
 ![1](https://user-images.githubusercontent.com/9198297/203431816-818aef01-415d-4ed6-b1e6-43f3b7512ebe.jpg)
 ![2](https://user-images.githubusercontent.com/9198297/203431817-50687688-f1fb-40fb-857b-2ba9a045cc7b.jpg)
 
